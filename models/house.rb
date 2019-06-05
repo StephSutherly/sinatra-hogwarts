@@ -11,7 +11,6 @@ class House
   end
 
   def save()
-    binding.pry
     sql = "INSERT INTO houses
     (
       name,
