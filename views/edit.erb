@@ -1,0 +1,21 @@
+<form action="/students/<%=@student.id%>" method="post">
+
+  <label for="first-name">First Name:</label> <!-- for field must match id field-->
+    <input type="text" value="<%= @student.first_name %>" name="first_name" id="first-name">
+
+  <label for="last-name">Last Name:</label>
+    <input type="text" value="<%= @student.last_name %>" name="last_name" id="last-name">
+
+  <label for="house">Select a house:</label>
+    <select id="house" name="house">
+      <option value="Gryffindor"<%= "selected" if @student.house == "Gryffindor" %>>Gryffindor</option>
+      <option value="Ravenclaw"<%= "selected" if @student.house == "Ravenclaw" %>>Ravenclaw</option>
+      <option value="Hufflepuff"<%= "selected" if @student.house == "Hufflepuff" %>>Hufflepuff</option>
+      <option value="Slytherin"<%= "selected" if @student.house == "Slytherin" %>>Slytherin</option>
+    </select>
+
+  <label for="age">Age:</label>
+    <input type="number" value="<%= @student.age%>" name="age" id="age">
+
+  <input type="submit" value="Update Student">
+</form>
